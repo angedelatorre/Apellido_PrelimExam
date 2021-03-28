@@ -3,7 +3,7 @@ public class Student {
     private int Id;
     private int Hours;
     private int Points;
-    private double gp;
+    private double grade;
 
     public Student() {
     }
@@ -12,7 +12,7 @@ public class Student {
         this.Id = Id;
         this.Hours = Hours;
         this.Points = Points;
-        calculateGradePoint();
+        GradePoint();
     }
 
     public int getId() {
@@ -42,10 +42,10 @@ public class Student {
    @Override
    public String toString() {
        return "\nID number : " + Id + "\nNumber of points earned : " + Points + "\nCredit hours : " + Hours + "\nGrade point average : "
-               + gp;
+               + grade;
    }
 
-   public void calculateGradePoint() {
-       gp = Points / (double) Hours;
+   public void GradePoint() {
+       grade = Points / (double) Hours;
    }
 }
